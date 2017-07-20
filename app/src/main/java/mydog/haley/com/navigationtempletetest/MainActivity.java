@@ -71,6 +71,9 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    ///// 우측 상단 메뉴 설정 /////
+
+    // onCreateOptionsMenu() : API 11이상 - 액티비티를 시작할 때 앱 바에 항목을 표시하기 위해 호출됨
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -78,22 +81,28 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    // onOptionsItemSelected() : 사용자가 메뉴에서 항목을 선택하면 실행 시킬 명령어 작성
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        // onOptionsItemSelected(MenuItem item) -> 사용자가 선택한 메뉴 아이템을 전달
 
-        //noinspection SimplifiableIfStatement
+        int id = item.getItemId(); // 선택한 메뉴를 식별하기 위해 메뉴 항목의 고유 id 반환
+
+        //action_settings 선택 시
         if(id == R.id.action_settings) {
-            return true;
+            return true; // 메뉴 항목을 성공적으로 처리하면 true 반환
         }
 
+        // 메뉴 항목을 처리하지 않는 경우 해당 함수의 수퍼클래스 호출(기본 구현은 false)
         return super.onOptionsItemSelected(item);
     }
 
-    // onNavigationItemSelected : 네이게이션 메뉴의 아이템 선택 시 실행할 함수 구현
+    /// => 메뉴 팁 ! 여러 개의 액티비티가 같은 내용의 옵션 메뉴를 제공할 때
+    // 메뉴 전용 액티비티 생성 후 메뉴가 필요한 액티비티로 확장할 것 !
+
+
+
+    // onNavigationItemSelected : 네비게이션 메뉴의 아이템 선택 시 실행할 함수 구현
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

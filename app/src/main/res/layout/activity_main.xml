@@ -19,6 +19,9 @@
 	<!--2. drawer를 다음 자식 뷰로 추가-->
 	<!-- layout_gravity : start/end 또는 left/right-->
 	<!-- layout_height : match_parent 주로 사용-->
+	<!-- headerLayout : 네비게이션 헤드 설정-->
+	<!-- menu : 네비게이션 메뉴 설정 -->
+	<!-- fitsSystemWindows : 뷰 레이아웃을 시스템 윈도우에 맞춰 조정-->
 	<android.support.design.widget.NavigationView
 		android:id="@+id/nav_view"
 		android:layout_width="wrap_content"

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- ConstraintLayout : 위젯의 사이즈와 위치를 유연하게 조정할 수 있도록 해주는 뷰 그룹-->
+<!-- API 9 부터 사용 가능-->
 <android.support.constraint.ConstraintLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,7 +12,10 @@
 	tools:context="mydog.haley.com.navigationtempletetest.MainActivity"
 	tools:showIn="@layout/app_bar_main">
 	
+	<!--메인 컨텐츠-->
+	
 	<TextView
+		android:id="@+id/hello"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Hello World!"
@@ -17,5 +23,14 @@
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"
 		app:layout_constraintTop_toTopOf="parent"/>
+	
+	<!--ConstraintLayout에서 위치 포지션-->
+	<!--layout_constraintLeft/Right/Start/End_toRight/LetfOf-->
+	<!--선택 뷰의 왼쪽 또는 오른쪽 사이드의 위치를 기준 뷰의 오른쪽 또는 왼쪽에 맞춰라!-->
+	<!--layout_constraintTop/Bottom_toTop/BottomOf-->
+	<!--선택 뷰의 위쪽 또는 아래쪽의 위치를 기준 뷰의 위 또는 아래에 맞추기-->
+	
+	
+	
 
 </android.support.constraint.ConstraintLayout>

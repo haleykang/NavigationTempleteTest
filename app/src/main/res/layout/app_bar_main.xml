@@ -7,6 +7,8 @@
 	android:layout_height="match_parent"
 	tools:context="mydog.haley.com.navigationtempletetest.MainActivity">
 	
+	<!--AppBarLayout :  vertical LinearLayout/scrolling gestures-->
+	<!--CoordinatorLayout의 자식뷰로 사용!!!! -> 다른 뷰 그룹과 사용하면 작동 안될 수 있음-->
 	<android.support.design.widget.AppBarLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -21,8 +23,10 @@
 	
 	</android.support.design.widget.AppBarLayout>
 	
+	<!--content_main 레이아웃 포함 -->
 	<include layout="@layout/content_main"/>
 	
+	<!--우측 하단 FloationActionButton 추가-->
 	<android.support.design.widget.FloatingActionButton
 		android:id="@+id/fab"
 		android:layout_width="wrap_content"
